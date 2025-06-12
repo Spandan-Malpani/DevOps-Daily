@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Deploy to Tomcat') {
+        stage('Deploy to Tomcat server') {
             steps {
                 sshagent(credentials: ['tomcat-ssh-key']) {
                     sh """
